@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.timer-container{
+    position: absolute;
+    margin-right: 1000px;
+    margin-bottom: 00px;
+   
+}
+.moves{
+    position: absolute;
+    margin-right: 1000px;
+    margin-bottom: 10px;
+}
+.timer{
+    background-color: lightblue;
+    width: 220px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 50px;
+    border-radius: 20px;
+    color: white;
+}
+.move{
+    background-color: lightblue;
+    width: 220px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 50px;
+    border-radius: 20px;
+    color: white;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:pink;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: lightblue;
+    padding: 40px 60px;
+    border-radius: 20px;
+}
+h2{
+    font-size: 3em;
+    color: white;
+    letter-spacing:0.1em;
+}
+.reset{
+    padding: 15px 20px;
+    color: lightblue;
+    background: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-weight: 600;   
+    border-radius: 20px; 
+}
+
+.reset:focus{
+    color: white;
+    background-color: pink;
+}
+.Game{
+    width: 430px;
+    height:430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    transform-style:preserve-3d ;
+    perspective: 500px;
+}
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 4em;
+    background-color: white;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.item.boxopen{
+    transform: rotateY(0deg);
+    
+}
+.item.match{
+    transform: rotateY(0deg);
+    
+}
+.item::after{
+    content: "";
+    inset: 0;
+    position: absolute;
+    background:white;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.match::after,
+.boxopen::after{
+    transform: rotateY(180deg);
+}
